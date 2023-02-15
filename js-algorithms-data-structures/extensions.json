@@ -1,0 +1,77 @@
+{
+    "oderwat.indent-rainbow": {
+        "uuid": "eaa2127d-cb69-4ab9-8505-a60c9ee5f28b",
+        "label": "indent-rainbow",
+        "description": "Makes indentation easier to read"
+    },
+    "bradlc.vscode-tailwindcss": {
+        "uuid": "4db62a7c-7d70-419c-96d2-6c3a4dc77ea5",
+        "label": "Tailwind CSS IntelliSense",
+        "description": "Intelligent Tailwind CSS tooling for VS Code"
+    },
+    "esbenp.prettier-vscode": {
+        "uuid": "96fa4707-6983-4489-b7c5-d5ffdfdcce90",
+        "label": "Prettier - Code formatter",
+        "description": "Code formatter using prettier"
+    },
+    "ritwickdey.liveserver": {
+        "uuid": "b63c44fd-0457-4696-99e9-dbfdf70d77de",
+        "label": "Live Server",
+        "description": "Launch a development local Server with live reload feature for static & dynamic pages"
+    },
+    "ms-vscode.live-server": {
+        "uuid": "4eae7368-ec63-429d-8449-57a7df5e2117",
+        "label": "Live Preview",
+        "description": "Hosts a local server in your workspace for you to preview your webpages on."
+    },
+    "ms-vscode.vscode-typescript-next": {
+        "uuid": "15305aca-2588-4ca0-8147-ab2c64730b82",
+        "label": "JavaScript and TypeScript Nightly",
+        "description": "Enables typescript@next to power VS Code's built-in JavaScript and TypeScript support"
+    },
+    "xabikos.javascriptsnippets": {
+        "uuid": "a2cec723-5349-460d-9de9-0fd1f8d3456f",
+        "label": "JavaScript (ES6) code snippets",
+        "description": "Code snippets for JavaScript in ES6 syntax"
+    },
+    "visualstudioexptteam.vscodeintellicode": {
+        "uuid": "876e8f93-74d0-4f4f-91b7-34a09f19f444",
+        "label": "IntelliCode",
+        "description": "Desarrollo asistido por inteligencia artificial"
+    },
+    "github.vscode-pull-request-github": {
+        "uuid": "69ddd764-339a-4ecc-97c1-9c4ece58e36d",
+        "label": "GitHub Pull Requests and Issues",
+        "description": "Pull Request and Issue Provider for GitHub"
+    },
+    "github.copilot": {
+        "uuid": "23c4aeee-f844-43cd-b53e-1113e483f1a6",
+        "label": "GitHub Copilot",
+        "description": "Your AI pair programmer"
+    },
+    "evald24.vscode-extension-profiles": {
+        "uuid": "53b2c651-4404-420f-b62b-b9f8fc915c5a",
+        "label": "Extension profiles",
+        "description": "Lets you create profiles to include the selected extensions in the desired project."
+    },
+    "visualstudioexptteam.intellicode-api-usage-examples": {
+        "uuid": "9fa2a00e-3bfa-4c2a-abc4-a865bb2b5cf3",
+        "label": "Ejemplos de uso de la API de IntelliCode",
+        "description": "Vea ejemplos de código relevantes de GitHub para obtener más de 100 000 API diferentes directamente en el editor."
+    },
+    "formulahendry.code-runner": {
+        "uuid": "a6a0c5b2-d078-4bf5-a9ee-4e37054414b3",
+        "label": "Code Runner",
+        "description": "Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Obj-C, Rust, Racket, Scheme, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D, Lisp, Kit, V, SCSS, Sass, CUDA, Less, Fortran, Ring, Standard ML, Zig"
+    },
+    "polymermallard.css-alphabetize": {
+        "uuid": "933b06e8-75aa-4d48-ac73-2bda980a7da3",
+        "label": "CSS Alphabetize",
+        "description": "Alphabetizes the properties of CSS structures."
+    },
+    "astro-build.astro-vscode": {
+        "uuid": "1fbbc8b0-7432-4b7e-8774-3336151da2f3",
+        "label": "Astro",
+        "description": "Language support for Astro"
+    }
+}
