@@ -1,9 +1,3 @@
-function rangeOfNumbers(startNum, endNum) {
-    if (startNum > endNum) return [];
-    if (startNum === endNum) return [endNum];
-        const countArray = rangeOfNumbers(startNum + 1, endNum);
-        countArray.unshift(startNum);
-        return countArray; 
-};
-
-console.log(rangeOfNumbers(1, 5));
+let exampleStr = 'Try to count all the non \'alphanumeric characters\' in this sentence!';
+let regex = /\W/g;
+console.log(exampleStr.match(regex).length); // 10
