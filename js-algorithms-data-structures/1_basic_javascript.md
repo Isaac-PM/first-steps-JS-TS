@@ -252,6 +252,31 @@ const person = {
 const personNameA = person.name;
 console.log(personNameA); // John
 ```
+#### Using an iterator
+
+```javascript
+const person = {
+    name: 'John',
+    age: 30,
+};
+
+for (let property in person) {
+    console.log(`${property}: ${person[property]}`);
+}
+```
+#### Using `Object.keys()`
+
+`Object.keys()` returns an array of a given object's own enumerable properties.
+
+```javascript
+const person = {
+    name: 'John',
+    age: 30,
+};
+
+const personKeys = Object.keys(person);
+console.log(personKeys); // ['name', 'age']
+```
 
 ## Random whole numbers
 

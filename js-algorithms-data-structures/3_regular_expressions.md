@@ -59,7 +59,7 @@ console.log(regex.test(myMail)); // true
 The wildcard character `.` is used to match any character.
 
 ```javascript
-let exampleStrA = 'Let's have fun with regular expressions!';
+let exampleStrA = "Let's have fun with regular expressions!";
 let exampleStrB = 'To make hay while the sun shines.';
 let regex = /.un/;
 console.log(regex.test(exampleStrA)); // true
@@ -115,6 +115,11 @@ console.log(regexA.test(exampleStr)); // true
 // Search at the end of the string can be achieved by using the $ character.
 let regexB = /world!$/;
 console.log(regexB.test(exampleStr)); // true
+
+// For delimiting the beginning and end of a string, the ^ and $ characters can be used together.
+
+let regexC = /^Hello, world!$/;
+console.log(regexC.test(exampleStr)); // true
 ```
 
 # Finding characters that occur one or more times
@@ -159,6 +164,8 @@ let regexB = /t[a-z]*?i/;
 console.log(ship.match(regexB)); // ['Ti']
 ```
 
+> The `?` character is also used to make a character optional, for example `/colou?r/` will match both `color` and `colour`, because the `u` character is optional.
+
 # Character classes
 
 Insead of using long character sets, it is possible to use character classes. Character classes are predefined sets of characters, for example the `\w` character class matches all alphanumeric characters (including underscore). The `\w` character class is equivalent to `[A-Za-z0-9_]`.
@@ -190,7 +197,7 @@ Other character classes are:
 
 > It is useful to include the `g` flag when using character classes.
 
-# Example: creating a regex that checks if a string is a valid username
+## Example: creating a regex that checks if a string is a valid username
 
 Conditions:
 
@@ -211,3 +218,91 @@ Adding an aditional case:
 - Usernames with three characterts, but the last two are numbers: `^[a-z]\d\d+$`
 
 Final regex: `/^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i`
+
+# Quantity specifiers
+
+The curly brackets `{}` are used to match a specific number of characters.
+
+```javascript
+let exampleStrA = "Aaaaaaaaaaaah!";
+let exampleStrB = "Aaah!";
+
+let regex = /Aa{1,5}h!/;
+
+console.log(regex.test(exampleStrA)); // false
+console.log(regex.test(exampleStrB)); // true, because the string contains 1 to 5 'a' characters.
+```
+
+## Exact number of matches
+
+If the exact number of matches is required, the curly brackets can be used without the comma.
+
+`let regex = /Aa{3}h!/;`
+
+## Greater than or equal to number of matches
+
+If the number of matches is greater than or equal to the specified number, the curly brackets can be used with the comma.
+
+`let regex = /Aa{3,}h!/;`
+
+# Positive and negative lookaheads
+
+See [this](https://www.regextutorial.org/positive-and-negative-lookahead-assertions.php) article.
+
+# Grouping characters
+
+Characters can be grouped using the parentheses `()`.
+
+```javascript
+let exampleStrA = 'CARDIAC';
+let exampleStrB = 'CERAMIC';
+let exampleRegex = /C(ARDIA|ERAMI)C/;
+
+console.log(exampleRegex.test(exampleStrA)); // true
+console.log(exampleRegex.test(exampleStrB)); // true
+```
+
+## Repeating groups
+
+Character groups can be acceded using a temporary variable that is invoked using the backslash `\` character.
+
+```javascript
+let exampleStr = '21 21 21';
+let regex = /(21)\s+\1\s+\1/;
+console.log(regex.test(exampleStr)); // true
+```
+
+# Replacing text
+
+The `replace()` method is strucured as follows: `stringToSearch.replace(regex, replacementString)`, as shown in the example below.
+
+```javascript
+let exampleStr = 'wElcome home!';
+let regex = /wElcome/;
+let replacement = 'Welcome';
+exampleStr.replace(regex, replacement); // Welcome home!
+```
+
+## Implementing capture groups
+
+Capture groups can be captured using the `$` character.
+
+```javascript
+let exampleStr = 'A B C D';
+let regex = /(\w)\s+(\w)\s+(\w)\s+(\w)/; // Note that capture groups are delimited by parentheses.
+let replacement = '$4 $3 $2 $1';
+exampleStr.replace(regex, replacement); // D C B A
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+let replaceText = "$3 $2 $1";
+let result = str.replace(fixRegex, replaceText);
+```
+## Example: removing whitespaces from a string
+
+```javascript
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let result = hello.replace(wsRegex, "");
+```
+
